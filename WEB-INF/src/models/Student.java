@@ -81,7 +81,7 @@ public class Student {
         ArrayList<Student> students = new ArrayList<>();
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/collegeERP?user=root,password=1234");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/collegeERP?user=root&password=1234");
             String query ="select * from students";
             PreparedStatement ps = con.prepareStatement(query);
             ResultSet rs = ps.executeQuery();

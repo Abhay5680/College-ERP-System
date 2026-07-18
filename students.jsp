@@ -158,17 +158,17 @@ Action
     <% for(Student s : students ) { %>
         <tr>
             
-            <td><%= s.%></td>
+            <td><%= s.getStudentId() %></td>
             
-            <td>Rahul Sharma</td>
+            <td><%= s.getName() %></td>
             
-            <td>rahul@gmail.com</td>
+            <td><%= s.getEmail() %></td>
             
-            <td>9876543210</td>
+            <td><%= s.getPhone() %></td>
+
+            <td><%= s.getDepartment() %></td>
             
-            <td>CSE</td>
-            
-            <td>B.Tech</td>
+            <td><%= s.getCourse() %></td>
             
             <td>
                 
