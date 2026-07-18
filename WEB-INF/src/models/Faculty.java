@@ -3,6 +3,7 @@ package models;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Faculty {
@@ -32,6 +33,25 @@ public class Faculty {
             ps.setString(1, email);
             ps.setString(2, password);
 
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                userId = rs.getInt("user_id");
+                name = rs.getString("name");
+                phone = rs.getString("phone");
+                gender = rs.getString("gender");
+                qualification = rs.getString("qualification");
+                experience = rs.getString("experience");
+                department = rs.getString("department");
+                designation = rs.getString("designation");
+                salary = rs.getString("salary");
+                joiningDate = rs.getString("joiningDate");
+                address = rs.getString("address");
+
+                flag = true;
+            }
+
+            con.close();
+            
 
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
