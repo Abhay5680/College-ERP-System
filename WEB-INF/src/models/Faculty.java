@@ -29,8 +29,8 @@ public class Faculty {
             Connection con =DriverManager.getConnection("jdbc:mysql://localhost:3306/collegeERP?user=root&password=1234");
             String query ="select * from faculties where email=? and password=?";
             PreparedStatement ps = con.prepareStatement(query);
-            String email = ps.setString(1, email);
-            String password = ps.setString(2, password);
+            ps.setString(1, email);
+            ps.setString(2, password);
 
 
         } catch (SQLException | ClassNotFoundException e) {
