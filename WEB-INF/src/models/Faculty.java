@@ -51,7 +51,7 @@ public class Faculty {
             }
 
             con.close();
-            
+
 
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -66,7 +66,7 @@ public class Faculty {
     }
 
 
-    public Faculty(String eamil, String password) {
+    public Faculty(String email, String password) {
         this.email = email;
         this.password = password;
     }
