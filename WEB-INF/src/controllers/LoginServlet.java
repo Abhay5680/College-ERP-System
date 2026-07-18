@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/login.do")
 public class LoginServlet extends HttpServlet{
 
-
     public void doPost(HttpServletRequest request,HttpServletResponse response)throws IOException,ServletException{
 
         String email = request.getParameter("email");

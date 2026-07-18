@@ -1,9 +1,14 @@
 package models;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 public class Faculty {
     private Integer userId;
     private String name;
-    private String eamil;
+    private String email;
     private String password;
     private String phone;
     private String gender;
@@ -16,21 +21,42 @@ public class Faculty {
     private String address;
 
 
+    public Boolean Login(){
+        Boolean flag = false;
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con =DriverManager.getConnection("jdbc:mysql://localhost:3306/collegeERP?user=root&password=1234");
+            String query ="select * from faculties where email=? and password=?";
+            PreparedStatement ps = con.prepareStatement(query);
+            String email = ps.setString(1, email);
+            String password = ps.setString(2, password);
+
+
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
+        return flag;
+    }
+
+
     public Faculty() {
     }
 
 
     public Faculty(String eamil, String password) {
-        this.eamil = eamil;
+        this.email = email;
         this.password = password;
     }
     
     
-    public Faculty(String name, String eamil, String password, String phone, String gender, String qualification,
+    public Faculty(String name, String email, String password, String phone, String gender, String qualification,
             String experience, String department, String designation, String salary, String joiningDate,
             String address) {
         this.name = name;
-        this.eamil = eamil;
+        this.email = email;
         this.password = password;
         this.phone = phone;
         this.gender = gender;
@@ -51,10 +77,10 @@ public class Faculty {
         this.name = name;
     }
     public String getEamil() {
-        return eamil;
+        return email;
     }
     public void setEamil(String eamil) {
-        this.eamil = eamil;
+        this.email = eamil;
     }
     public String getPassword() {
         return password;
@@ -123,20 +149,5 @@ public class Faculty {
         this.userId = userId;
     }
 
-    @Override
-    public String toString() {
-        return "Faculty [userId=" + userId + ", name=" + name + ", eamil=" + eamil + ", password=" + password
-                + ", phone=" + phone + ", gender=" + gender + ", qualification=" + qualification + ", experience="
-                + experience + ", department=" + department + ", designation=" + designation + ", salary=" + salary
-                + ", joiningDate=" + joiningDate + ", address=" + address + ", getName()=" + getName() + ", getEamil()="
-                + getEamil() + ", getClass()=" + getClass() + ", getPassword()=" + getPassword() + ", getPhone()="
-                + getPhone() + ", getGender()=" + getGender() + ", getQualification()=" + getQualification()
-                + ", getExperience()=" + getExperience() + ", getDepartment()=" + getDepartment()
-                + ", getDesignation()=" + getDesignation() + ", getSalary()=" + getSalary() + ", getJoiningDate()="
-                + getJoiningDate() + ", getAddress()=" + getAddress() + ", getUserId()=" + getUserId() + ", hashCode()="
-                + hashCode() + ", toString()=" + super.toString() + "]";
-    }
-    
-    
 
 }
