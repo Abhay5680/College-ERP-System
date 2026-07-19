@@ -67,7 +67,7 @@ Update Student Information
 
 <!-- Hidden Student ID -->
 
-<input type="hidden" name="studentId" value="${student.studentId}">
+<input type="hidden" name="studentId">
 
 <div class="row">
 
@@ -79,7 +79,6 @@ Update Student Information
 type="text"
 class="form-control"
 name="name"
-value="${student.name}"
 required>
 
 </div>
@@ -92,7 +91,6 @@ required>
 type="email"
 class="form-control"
 name="email"
-value="${student.email}"
 required>
 
 </div>
@@ -105,7 +103,6 @@ required>
 type="text"
 class="form-control"
 name="phone"
-value="${student.phone}"
 required>
 
 </div>
@@ -116,11 +113,11 @@ required>
 
 <select class="form-select" name="gender">
 
-<option ${student.gender=="Male"?"selected":""}>Male</option>
+<option >Male</option>
 
-<option ${student.gender=="Female"?"selected":""}>Female</option>
+<option >Female</option>
 
-<option ${student.gender=="Other"?"selected":""}>Other</option>
+<option >Other</option>
 
 </select>
 
@@ -134,7 +131,7 @@ required>
 type="date"
 class="form-control"
 name="dob"
-value="${student.dob}">department
+>department
 
 </div>
 
@@ -144,7 +141,7 @@ value="${student.dob}">department
 
 <select class="form-select" name="">
 
-<option selected>${student.department}</option>
+<option selected></option>
 
 <option>Computer Science</option>
 <option>Information Technology</option>
@@ -162,7 +159,7 @@ value="${student.dob}">department
 
 <select class="form-select" name="course">
 
-<option selected>${student.course}</option>
+<option selected></option>
 
 <option>B.Tech</option>
 <option>M.Tech</option>
@@ -180,7 +177,7 @@ value="${student.dob}">department
 
 <select class="form-select" name="semester">
 
-<option selected>${student.semester}</option>
+<option selected></option>
 
 <option>1</option>
 <option>2</option>
@@ -203,7 +200,7 @@ value="${student.dob}">department
 type="text"
 class="form-control"
 name="rollNo"
-value="${student.rollNo}">
+>
 
 </div>
 
@@ -225,7 +222,7 @@ name="photo">
 <textarea
 class="form-control"
 rows="3"
-name="address">${student.address}</textarea>
+name="address"></textarea>
 
 </div>
 
