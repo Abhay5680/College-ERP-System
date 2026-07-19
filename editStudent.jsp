@@ -63,7 +63,7 @@ Update Student Information
 
 <div class="card-body">
 
-<form action="UpdateStudentServlet" method="post" enctype="multipart/form-data">
+<form action="update.do" method="post" >
 
 <!-- Hidden Student ID -->
 
@@ -134,7 +134,7 @@ required>
 type="date"
 class="form-control"
 name="dob"
-value="${student.dob}">
+value="${student.dob}">department
 
 </div>
 
@@ -142,7 +142,7 @@ value="${student.dob}">
 
 <label class="form-label">Department</label>
 
-<select class="form-select" name="department">
+<select class="form-select" name="">
 
 <option selected>${student.department}</option>
 

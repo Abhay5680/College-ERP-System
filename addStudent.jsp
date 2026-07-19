@@ -37,7 +37,7 @@ Add New Student
 
 </h4>
 
-<a href="students.jsp" class="btn btn-secondary">
+<a href="dashboard.jsp" class="btn btn-secondary">
 
 <i class="bi bi-arrow-left"></i>
 
