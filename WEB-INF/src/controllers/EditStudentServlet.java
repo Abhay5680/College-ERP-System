@@ -30,14 +30,11 @@ public class EditStudentServlet extends HttpServlet{
 
         Student students = new Student(studentId, name, email, phone, gender, gender, department, course, semester, rollNo, adddress);
         if (students.UpdateStudentData()) {
-            nextPage = "student.do";
+            nextPage = "student.jsp";
         }
 
         request.getRequestDispatcher(nextPage).forward(request, response);
     } 
-
-
-
 
     public void doGet(HttpServletRequest request,HttpServletResponse response) throws IOException,ServletException{
            request.getRequestDispatcher("editStudent.jsp").forward(request, response);

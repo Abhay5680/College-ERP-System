@@ -23,7 +23,7 @@ public class LoginServlet extends HttpServlet{
 
         Faculty faculty = new Faculty(email, password);
         if (faculty.Login()) {
-             nextPage ="dashboard.do";
+             nextPage ="dashboard.jsp";
         }else{
             request.setAttribute("error", "Incorrect username or password. Please try again.");
         }
