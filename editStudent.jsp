@@ -63,7 +63,8 @@ Update Student Information
 
 <div class="card-body">
 
-<form action="update.do" method="post" >
+<form action="update.do?name=<%= s.getName() %>&email=<%= s.getEmail() %>&phone=<%= s.getPhone() %>&gender=<%= s.getGender() %>&dob=<%= s.getDob() %>&department=<%= s.getDepartment() %>course=<%= s.getCourse() %>&semester=<%= s.getSemester() %>&rollno=<%= s.getRollNo() %>&address=<%= s.getAddress() %>studentId=<%= s.getStudentId() %>"
+                class="btn btn-warning btn-sm">" method="post" >
 
 <!-- Hidden Student ID -->
 
