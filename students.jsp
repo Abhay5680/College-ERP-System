@@ -182,7 +182,7 @@ Action
             
             <td>
                 
-                <a  href="edit.do?studentId=<%= s.getStudentId() %>"
+                <a  href="edit.do?name=<%= s.getName() %>&email=<%= s.getEmail() %>&phone=<%= s.getPhone() %>&gender=<%= s.getGender() %>&dob=<%= s.getDob() %>&department=<%= s.getDepartment() %>course=<%= s.getCourse() %>&semester=<%= s.getSemester() %>&rollno=<%= s.getRollNo() %>&address=<%= s.getAddress() %>studentId=<%= s.getStudentId() %>"
                 class="btn btn-warning btn-sm">
                 
                 <i class="bi bi-pencil-square"></i>

@@ -103,6 +103,8 @@ required>
 type="text"
 class="form-control"
 name="phone"
+maxlength="10"
+minlength="10"
 required>
 
 </div>

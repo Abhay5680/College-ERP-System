@@ -149,19 +149,19 @@ public class Student {
     }
 
     
-    public Student(Integer studentId, String name, String email, String phone, String gender, String dob,
+    public Student(Integer studentId,String name, String email, String phone, String gender, String dob,
             String department, String course, String semester, String rollNo, String address) {
-        this.studentId = studentId;
-        this.name = name;
-        this.email = email;
-        this.phone = phone;
-        this.gender = gender;
-        this.dob = dob;
-        this.department = department;
-        this.course = course;
-        this.semester = semester;
-        this.rollNo = rollNo;
-        this.address = address;
+                this.studentId = studentId;
+                this.name = name;
+                this.email = email;
+                this.phone = phone;
+                this.gender = gender;
+                this.dob = dob;
+                this.department = department;
+                this.course = course;
+                this.semester = semester;
+                this.rollNo = rollNo;
+                this.address = address;
     }
 
 
